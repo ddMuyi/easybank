@@ -175,19 +175,23 @@ header {
   justify-self: flex-start;
 }
 
-@media screen and (max-width:800px) {
+@media screen and (max-width:1040px) {
   header {
     width:100%;
     padding:0 2rem;
   }
+}
+
+@media screen and (max-width:800px) {
   .nav-bar {
     position:absolute;
-    width:100%;
+    width:90%;
     height:auto;
-    left:0;
-    top:10vh;
+    left:auto;
+    top:11vh;
     z-index:9;
-    background:linear-gradient(to right,var(--limeGreen), var(--brightCyan));
+    background:var(--white);
+    border-radius:8px;
     display:none;
   }
 
@@ -221,12 +225,21 @@ header {
     border:none;
   }
 
+  .nav-link{
+    width:100%;
+    display:block;
+    padding:0.5rem 2rem;
+    border-radius:8px;
+  }
+
   .nav-link:hover {
     color:var(--white);
+    background:linear-gradient(to right,var(--limeGreen), var(--brightCyan));
   }
 
   .banner {
-    height:100vh;
+    height:auto;
+    padding-bottom: 1rem;
   }
 
   .hero-banner {
@@ -267,7 +280,7 @@ header {
   }
   
   .hero-text {
-    margin-top:15rem;
+    margin-top:20rem;
   }
 
   .hero-banner {
@@ -334,14 +347,24 @@ header {
   font-weight:300;
 }
 
-@media screen and (max-width:800px) {
+@media screen and (max-width:1040px) {
   .services{
-    height:100vh;
+    height:auto;
+    padding:0 2rem;
+    padding-bottom:1rem;
   }
+
+  .service-card {
+    font-size:0.8rem;
+  }
+}
+
+@media screen and (max-width:800px) {
+  
   .services-cards {
     display:grid;
-    grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat(7, auto);
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, auto);
   }
 
   .card1 {
@@ -352,26 +375,27 @@ header {
   }
 
   .card2 {
-    grid-column-start: 5;
-    grid-column-end: 8;
+    grid-column-start: 4;
+    grid-column-end: 7;
     grid-row-start: 1;
     grid-row-end: 4;
   }
   .card3 {
     grid-column-start: 1;
     grid-column-end: 4;
-    grid-row-start: 5;
-    grid-row-end: 8;
+    grid-row-start: 4;
+    grid-row-end: 7;
   }
 
   .card4 {
-    grid-column-start: 5;
-    grid-column-end: 8;
-    grid-row-start: 5;
-    grid-row-end: 8;
+    grid-column-start: 4;
+    grid-column-end: 7;
+    grid-row-start: 4;
+    grid-row-end: 7;
   }
   .service-card {
     width:auto;
+    font-weight:1rem;
   }
 }
 
@@ -389,12 +413,27 @@ header {
   .services-cards{
     display:flex;
     flex-direction:column;
+    align-items: center;
     padding:0 1rem;
-    width:90%;
+    width:100%;
+    gap:1.5rem;
   }
 
   .service-card {
     width:100%;
+  }
+
+  .service-card img{
+    position:relative;
+    left:40%;
+  } 
+  .service-card h3{
+    text-align:center;
+  }
+
+  .service-card p {
+    font-size:0.9rem;
+    text-align:justify;
   }
 }
 
@@ -433,6 +472,8 @@ header {
   width:100%;
   height:auto;
   display:block;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
 }
 
 .card-texts {
@@ -452,15 +493,25 @@ header {
   color:var(--grayishBlue);
 }
 
-@media screen and (max-width:800px) {
+@media screen and (max-width:1040px) {
   .articles{
-    height:100vh;
+    height:auto;
+    padding:0 2rem;
+    padding-bottom:1rem;
   }
+
+  .card-texts {
+    padding:1rem;
+  }
+}
+
+@media screen and (max-width:800px) {
+  
 
   .articles-cards {
     display:grid;
-    grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat(7, auto);
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, auto);
   }
   
   .acard1 {
@@ -471,23 +522,23 @@ header {
   }
 
   .acard2 {
-    grid-column-start: 5;
-    grid-column-end: 8;
+    grid-column-start: 4;
+    grid-column-end: 7;
     grid-row-start: 1;
     grid-row-end: 4;
   }
   .acard3 {
     grid-column-start: 1;
     grid-column-end: 4;
-    grid-row-start: 5;
-    grid-row-end: 8;
+    grid-row-start: 4;
+    grid-row-end: 7;
   }
 
   .acard4 {
-    grid-column-start: 5;
-    grid-column-end: 8;
-    grid-row-start: 5;
-    grid-row-end: 8;
+    grid-column-start: 4;
+    grid-column-end: 7;
+    grid-row-start: 4;
+    grid-row-end: 7;
   }
 
   .article-card {
@@ -551,6 +602,12 @@ footer {
   display:flex;
   gap:1rem;
   margin-top:1rem;
+}
+
+@media screen and (max-width:1040px) {
+  footer {
+    padding:3rem 2rem;
+  }
 }
 
 @media screen and (max-width:800px) {
